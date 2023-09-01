@@ -46,7 +46,7 @@
               </div>
             </div>
             <div class="navbar-center">
-              <a class="btn btn-ghost normal-case text-xl">Sort by view</a>
+              <a onclick="sortByView()" class="btn btn-ghost normal-case text-xl">Sort by view</a>
             </div>
             <div class="navbar-end">
               <button class="btn bg-[#FF1F3D] text-white px-6">Blog</button>
@@ -55,7 +55,7 @@
         </div>
       </section>
     </header>
-    <main>
+    <main class="container mx-auto">
       <section>
         <div id="tab-container" class="flex justify-center py-4 px-3"></div>
       </section>
@@ -66,6 +66,12 @@
         id="card-container"
         class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-3 h-[330px]"
       ></div>
+
+      <!-- error card if product not found -->
+      <div id="error-card-container" class="container">
+
+
+      </div>
     </main>
 
     <script src="./js/api.js"></script>
