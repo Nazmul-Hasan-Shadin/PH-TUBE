@@ -64,7 +64,7 @@ const handleloadNewsData = async (id) => {
       <div class="card  bg-base-100 shadow-xl">
       <figure>
       
-      <img class="w-100  lg:h-[206px] w-full" src=${
+      <img class="w-100 h-52 lg:h-[206px] w-full" src=${
         data.thumbnail
       } alt="Shoes" />
 
@@ -95,13 +95,13 @@ const handleloadNewsData = async (id) => {
 
 
              </div>
-         <div class="flex">
+         <div class="flex gap-0">
          <p class="text-[#171717B3]" id="creator">${
            data.authors[0].profile_name
          }</p>
          <p>${
            data.authors[0].verified
-             ? '<img class="w-4" src="../star.svg"/>'
+             ? '<img class="w-4 relative top-1 -left-6" src="../star.svg"/>'
              : ""
          } <p>
          </div>
