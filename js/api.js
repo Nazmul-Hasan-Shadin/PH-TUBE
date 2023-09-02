@@ -56,11 +56,38 @@ const handleloadNewsData= async (id)=>{
     cardContainer.innerHTML='';
   
     data.data.forEach((data)=>{
+      console.log(data);
        
+      // second to time
+      const seconds=data.others.posted_date;
+
+      const hour = Math.floor(seconds / 3600);
+const remainingSecondsAfterHours = seconds % 3600;
+const minute = Math.floor(remainingSecondsAfterHours / 60);
+
+
+      const times= `${hour} hr ${minute} min ago` 
+
      const div= document.createElement('div')
+
       div.innerHTML= `
       <div class="card  bg-base-100 shadow-xl">
-      <figure><img class="w-100  lg:h-[206px] w-full" src=${data.thumbnail} alt="Shoes" /></figure>
+      <figure>
+      
+      <img class="w-100  lg:h-[206px] w-full" src=${data.thumbnail} alt="Shoes" />
+
+
+
+      
+      <p class="absolute bottom-48 left-48 bg-black text-white">${times}</p>
+      
+
+
+
+
+
+      
+      </figure>
       <div class="card-body">
              <div class="flex gap-x-2">
               <img class="w-[13%] rounded-2xl" src=${data.authors[0].profile_picture} alt="">
