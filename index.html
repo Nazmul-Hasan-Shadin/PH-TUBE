@@ -46,15 +46,24 @@
               </div>
             </div>
             <div class="navbar-center">
-              <button onclick="sortByView()" class="btn btn-ghost btn-active normal-case  lg:text-xl">Sort by view</button>
-            
-               <hr color="red">
+              <button
+                onclick="sortByView()"
+                class="btn btn-ghost btn-active normal-case lg:text-xl"
+              >
+                Sort by view
+              </button>
             </div>
+
             <div class="navbar-end">
-              <button class="btn bg-[#FF1F3D] text-white  px-6">Blog</button>
+              <a href="./blog.html"
+                ><button class="btn bg-[#FF1F3D] text-white px-6">
+                  Blog
+                </button></a
+              >
             </div>
           </div>
         </div>
+        <hr class="w-full" />
       </section>
     </header>
     <main class="container mx-auto">
@@ -70,10 +79,7 @@
       ></div>
 
       <!-- error card if product not found -->
-      <div id="error-card-container" class="container">
-
-
-      </div>
+      <div id="error-card-container" class="container"></div>
     </main>
 
     <script src="./js/api.js"></script>

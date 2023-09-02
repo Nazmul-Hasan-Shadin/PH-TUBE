@@ -28,6 +28,7 @@ const handleloadNewsData = async (id) => {
   console.log(typeof data);
   if (data.data.length === 0) {
     const errorCardContainer = document.getElementById("error-card-container");
+    errorCardContainer.innerHTML = "";
 
     const div = document.createElement("div");
     //  this img and sm show in all page thats a problem
@@ -56,7 +57,7 @@ const handleloadNewsData = async (id) => {
     const remainingSeconds = seconds % 3600;
     const minute = Math.floor(remainingSeconds / 60);
 
-    const times = (hour > 0 || minute > 0) ? `${hour} hr ${minute} min ago` : '';
+    const times = hour > 0 || minute > 0 ? `${hour} hr ${minute} min ago` : "";
 
     const div = document.createElement("div");
 
@@ -71,7 +72,7 @@ const handleloadNewsData = async (id) => {
 
 
       
-      <p class="absolute bottom-48 left-44 bg-black text-white">${times}</p>
+      <p class="absolute bottom-44 left-[243px] md:bottom-48 lg:bottom-[183px]  md:left-[106px] lg:left-44 bg-black text-white">${times}</p>
       
 
 
